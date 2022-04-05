@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+            // Get the video
+            var video = document.getElementById("myVideo");
+            
+            // Get the button
+            var btn = document.getElementById("myBtn");
+            
+            // Pause and play the video, and change the button text
+            function myFunction() {
+              if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+              } else {
+                video.pause();
+                btn.innerHTML = "Play";
+              }
+            }
+    </script>
+</head>
+<body>
+    <nav>
+      <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Skillbox</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">skills</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">tests</a></li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </nav>
+    
+    <div class="slides slowFade">
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\003.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\004.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\005.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\007.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\006.jpg" alt="img"/>
+        </div>
+    </div>
+</section>   
+
+<section class="skills" id="skills">
+
+    <h1 class="heading"> <span>Skills</span> </h1>
+
+    <div class="row">
+
+        
+        <video autoplay muted loop id="myVideo">
+            <source src="C:\Users\suman\Desktop\desktop\Saved Pictures\abc.mp4" type="video/mp4">
+        </video>
+
+        <header class="video-header">
+            <video src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/Island%20-%204141.mp4" autoplay loop playsinline muted></video>
+            <div class="viewport-header">
+              <h1>
+                Explore
+                <span>Montana</span>
+              </h1>
+            </div>
+          </header>
+          
+          <main>
+            
+          </main>
+    </div>
+
+</section>
+
+
+
+
+
+
+<section class="learn" id="learn">
+
+    <h1 class="heading"> <span>Learn</span> </h1>
+
+    <div class="row">
+
+        
+        <div class="container">
+            <h1><span class="auto-type"></span></h1>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["Learn from peers"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            })
+        </script>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <div class="credit">created by <span>Engineers</span> | all rights reserved</div>
+</section>    
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+    }
+    body{
+        font-family: montserrat;
+        background: #000;
+      }
+      nav{
+        background: #022f69;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo{
+        color: #fff;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: #fff;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      a.active,a:hover{
+        background: #fff;
+        transition: .5s;
+        color: #022f69;
+      }
+      .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 968px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 875px){
+        .checkbtn{
+          display: block;
+        }
+        nav ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #27282c;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover, a.active{
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul{
+          left: 0;
+        }
+      }
+    .slowFade {
+        display: flex;
+        align-items: flex-start;
+        background: #fff;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .slowFade .slide img {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        background: #000;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        opacity: 0;
+        transform: scale(1.5) rotate(15deg);
+        -webkit-animation: slowFade 32s infinite;
+                animation: slowFade 32s infinite;
+    }
+    .slowFade .slide:nth-child(3) img {
+        -webkit-animation-delay: 8s;
+                animation-delay: 8s;
+    }
+    .slowFade .slide:nth-child(2) img {
+        -webkit-animation-delay: 16s;
+                animation-delay: 16s;
+    }
+    .slowFade .slide:nth-child(1) img {
+        -webkit-animation-delay: 24s;
+                animation-delay: 24s;
+    }
+
+    @keyframes slowFade {
+        25% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        40% {
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes slowFade {
+        25% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        40% {
+            opacity: 0;
+        }
+    }
+
+
+
+    .skills .row{
+        display: flex;
+        align-items: center;
+        background:var(--black);
+        flex-wrap: wrap;
+    }
+    
+    .skills .row .image{
+        flex:1 1 45rem;
+    }
+    
+    .skills .row .image img{
+        width: 100%;
+    }
+    .skills .row .content{
+        flex:1 1 45rem;
+        padding:2rem;
+    }
+    
+    .skills .row .content h3{
+        font-size: 3rem;
+        color:#fff;
+    }
+    
+    .skills .row .content p{
+        font-size: 1.6rem;
+        color:#ccc;
+        padding:1rem 0;
+        line-height: 1.8;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background: #2b323c;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container h1{
+        font-size: 80px;
+        font-weight: 600;
+      }
+      span{
+        color: white;
+      }
+
+      .footer{
+        background:var(--black);
+        text-align: center;
+    }
+    
+    .footer .share{
+        padding:1rem 0;
+    }
+    
+    .footer .share a{
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        color:#fff;
+        border:var(--border);
+        margin:.3rem;
+        border-radius: 50%;
+    }
+    
+    .footer .share a:hover{
+        background-color: var(--main-color);
+    }
+    
+    .footer .links{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding:2rem 0;
+        gap:1rem;
+    }
+    
+    .footer .links a{
+        padding:.7rem 2rem;
+        color:#fff;
+        border:var(--border);
+        font-size: 2rem;
+    }
+    
+    .footer .links a:hover{
+        background:var(--main-color);
+    }
+    
+    .footer .credit{
+        font-size: 2rem;
+        color:#fff;
+        font-weight: lighter;
+        padding:1.5rem;
+    }
+    
+    .footer .credit span{
+        color:var(--main-color);
+    }
+    
+
+
+
+
+    
+
+
+
+
+    @mixin coverer {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .video-header {
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        &, video, .viewport-header {
+          @include coverer;
+        }
+        video {
+          background: brown;
+          object-fit: cover;
+        }
+        .viewport-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      
+      html, body {
+        height: 100%;
+        overflow-x: hidden;
+      }
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 150%;
+        line-height: 1.4;
+      }
+      body {
+        margin: 0;
+      }
+      
+      
+      
+      h1 {
+        font-family: 'Syncopate', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3vw;
+        line-height: 1.2;
+        font-size: 3vw;
+        text-align: center;
+        span {
+          display: block;
+          font-size: 10vw;
+          letter-spacing: -0.6rem;
+        }
+      }
+      
+      main {
+        background: white;
+        position: relative;
+        padding: 1rem;
+        margin-top: 100vh;
+        &::before {
+          content: "";
+          @include coverer;
+          top: -100vh;
+        }
+        p {
+          max-width: 600px;
+          margin: 1rem auto;
+        }
+      }
+</style>    
+</html>

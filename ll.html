@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">RHINO</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">skills</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">tests</a>
+            
+        </li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </nav>
+    
+    <div class="slides slowFade">
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\003.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\004.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\005.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\007.jpg" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\006.jpg" alt="img"/>
+        </div>
+    </div>
+
+    <video width="1280" height="980" controls>
+        <source src="C:\Users\suman\Desktop\desktop\Saved Pictures\abc.mp4" type="video/mp4">
+      </video>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+    }
+    body{
+        font-family: montserrat;
+        background: #000;
+      }
+      nav{
+        background: #022f69;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo{
+        color: #fff;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: #fff;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      a.active,a:hover{
+        background: #fff;
+        transition: .5s;
+        color: #022f69;
+      }
+
+
+
+
+
+
+
+
+      .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 968px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 875px){
+        .checkbtn{
+          display: block;
+        }
+        nav ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #27282c;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover, a.active{
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul{
+          left: 0;
+        }
+      }
+    .slowFade {
+        display: flex;
+        align-items: flex-start;
+        background: #fff;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .slowFade .slide img {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        background: #000;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        opacity: 0;
+        transform: scale(1.5) rotate(15deg);
+        -webkit-animation: slowFade 32s infinite;
+                animation: slowFade 32s infinite;
+    }
+    .slowFade .slide:nth-child(3) img {
+        -webkit-animation-delay: 8s;
+                animation-delay: 8s;
+    }
+    .slowFade .slide:nth-child(2) img {
+        -webkit-animation-delay: 16s;
+                animation-delay: 16s;
+    }
+    .slowFade .slide:nth-child(1) img {
+        -webkit-animation-delay: 24s;
+                animation-delay: 24s;
+    }
+
+    @keyframes slowFade {
+        25% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        40% {
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes slowFade {
+        25% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        40% {
+            opacity: 0;
+        }
+    }
+
+
+</style>
+</html>
