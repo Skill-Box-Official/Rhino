@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">RHINO</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">skills</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">tests</a>
+            
+        </li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </nav>
+
+
+ 
+<div class="content">
+    <div class="images">
+                      <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\001.jpg">
+                      <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\002.jpg">
+                      <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\003.jpg">
+                      <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\004.jpg">
+                      <img src="C:\Users\suman\Desktop\desktop\Saved Pictures\005.jpg">
+                   </div>
+                   <div class="btm-slides">
+                      <span onclick="btm_slide(1)"></span>
+                      <span onclick="btm_slide(2)"></span>
+                      <span onclick="btm_slide(3)"></span>
+                      <span onclick="btm_slide(4)"></span>
+                      <span onclick="btm_slide(5)"></span>
+                   </div>
+                   <div class="sliders left" onclick="side_slide(-1)">
+                      <span class="fas fa-angle-left"></span>
+                   </div>
+                   <div class="sliders right" onclick="side_slide(1)">
+                      <span class="fas fa-angle-right"></span>
+                   </div>
+                </div>
+                <script>
+                   var indexValue = 1;
+                   showImg(indexValue);
+                   function btm_slide(e){showImg(indexValue = e);}
+                   function side_slide(e){showImg(indexValue += e);}
+                   function showImg(e){
+                     var i;
+                     const img = document.querySelectorAll('img');
+                     const slider = document.querySelectorAll('.btm-slides span');
+                     if(e > img.length){indexValue = 1}
+                     if(e < 1){indexValue = img.length}
+                     for(i = 0; i < img.length; i++){
+                       img[i].style.display = "none";
+                     }
+                     for(i = 0; i < slider.length; i++){
+                       slider[i].style.background = "rgba(255,255,255,0.1)";
+                     }
+                     img[indexValue-1].style.display = "block";
+                     slider[indexValue-1].style.background = "white";
+                   }
+                </script> 
+        
+
+
+                <section class="firstsection">
+                    <div class="box-main">
+                        <div class="firstHalf">
+                            <h1 class="text-big" id="web">
+                                Web Technology
+                            </h1>
+                             
+                            <p class="text-small">
+                                HTML stands for HyperText Markup
+                                Language. It is used to design
+                                web pages using a markup language.
+                                HTML is the combination of Hypertext
+                                and Markup language. Hypertext
+                                defines the link between the web
+                                pages. A markup language is used
+                                to define the text document within
+                                tag which defines the structure of
+                                web pages. HTML is a markup language
+                                that is used by the browser to
+                                manipulate text, images, and other
+                                content to display it in the required
+                                format.
+                            </p>
+             
+             
+                        </div>
+                    </div>
+                </section>
+             
+                <section class="secondsection">
+                    <div class="box-main">
+                        <div class="secondHalf">
+                            <h1 class="text-big" id="program">
+                                C Programming
+                            </h1>
+                            <p class="text-small">
+                                C is a procedural programming language.
+                                It was initially developed by Dennis
+                                Ritchie as a system programming
+                                language to write operating system.
+                                The main features of C language include
+                                low-level access to memory, simple set
+                                of keywords, and clean style, these
+                                features make C language suitable for
+                                system programming like operating system
+                                or compiler development.
+                            </p>
+             
+             
+                        </div>
+                    </div>
+                </section>
+             
+                <section class="section">
+                    <div class="paras">
+                        <h1 class="sectionTag text-big">Java</h1>
+             
+                        <p class="sectionSubTag text-small">
+                            Java has been one of the most
+                            popular programming language
+                            for many years. Java is Object
+                            Oriented. However it is not
+                            considered as pure object oriented
+                            as it provides support for primitive
+                            data types (like int, char, etc) The
+                            Java codes are first compiled into byte
+                            code (machine independent code). Then
+                            the byte code is run on Java Virtual
+                            Machine (JVM) regardless of the
+                            underlying architecture.
+                        </p>
+             
+             
+                    </div>
+             
+                    <div class="thumbnail">
+                        <img src="img.png" alt="laptop image">
+                    </div>
+                </section>
+             
+                <footer class="background">
+                    <p class="text-footer">
+                        Copyright ©-All rights are reserved
+                    </p>
+             
+             
+                </footer>                
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+    }
+    body{
+        font-family: montserrat;
+        background: #000;
+      }
+      nav{
+        background: #022f69;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo{
+        color: #fff;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: #fff;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      a.active,a:hover{
+        background: #fff;
+        transition: .5s;
+        color: #022f69;
+      }
+
+
+
+
+
+
+
+
+      .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 968px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 875px){
+        .checkbtn{
+          display: block;
+        }
+        nav ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #27282c;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover, a.active{
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul{
+          left: 0;
+        }
+      }
+
+
+
+
+      .content{
+        height: 720px;
+        width: 1500px;
+        position: relative;
+      }
+      .content .images{
+        height: 100%;
+        width: 100%;
+      }
+      .content .images img{
+        height: 100%;
+        width: 100%;
+      }
+      .btm-slides{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+      .btm-slides span{
+        height: 1px;
+        width: 50px;
+        border: 2px solid white;
+        margin: 0 3px;
+        cursor: pointer;
+      }
+      .sliders{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 23px;
+        width: 45px;
+        cursor: pointer;
+        border: 2px solid white;
+        background: rgba(255,255,255,0.1);
+      }
+      .sliders:hover{
+        background: rgba(255,255,255,0.2);
+      }
+      .sliders.active,.sliders:hover{
+        background: #fff;
+        transition: .5s;
+        color: #022f69;
+      }
+      .right{
+        right: 0;
+      }
+      .sliders span{
+        line-height: 40px;
+        font-size: 35px;
+        color: white;
+      }
+
+
+
+
+
+
+      .firstsection {
+        background-color: green;
+        height: 400px;
+    }
+ 
+    .secondsection {
+        background-color: blue;
+        height: 400px;
+    }
+ 
+    .box-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        max-width: 80%;
+        margin: auto;
+        height: 80%;
+    }
+ 
+    .firsthalf {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+ 
+    .secondhalf {
+        width: 30%;
+    }
+ 
+    .secondhalf img {
+        width: 70%;
+        border: 4px solid white;
+        border-radius: 150px;
+        display: block;
+        margin: auto;
+    }
+ 
+    .text-big {
+        font-family: 'Piazzolla', serif;
+        font-weight: bold;
+        font-size: 35px;
+    }
+ 
+    .text-small {
+        font-size: 18px;
+    }
+ 
+    .btn {
+        padding: 8px 20px;
+        margin: 7px 0;
+        border: 2px solid white;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        cursor: pointer;
+    }
+ 
+    .btn-sm {
+        padding: 6px 10px;
+        vertical-align: middle;
+    }
+ 
+    .section {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+    }
+ 
+    .section-Left {
+        flex-direction: row-reverse;
+    }
+ 
+    .paras {
+        padding: 0px 65px;
+    }
+ 
+    .thumbnail img {
+        width: 250px;
+        border: 2px solid black;
+        border-radius: 26px;
+        margin-top: 19px;
+    }
+ 
+    .center {
+        text-align: center;
+    }
+ 
+    .text-footer {
+        text-align: center;
+        padding: 30px 0;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+</style>
+</html>
